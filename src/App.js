@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { Route , Routes, BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-
+import Naslovna from './Components/Naslovna';
+import Metkovic from './Components/Metkovic';
+import Maraton from './Components/Maraton';
+import Norin from './Components/Norin';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Naslovna></Naslovna>}></Route>
+          <Route path='/metkovic' element={<Metkovic></Metkovic>}></Route>
+          <Route path='/maraton' element={<Maraton></Maraton>}></Route>
+          <Route path='/norin' element={<Norin></Norin>}></Route>
+        </Routes>
+      </Router>
+      <Footer></Footer>
     </div>
   );
 }

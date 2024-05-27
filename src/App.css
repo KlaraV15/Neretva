@@ -1,38 +1,1050 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.maraton{
+  font-size: 18px;
+  height: 100%;
+  
+}
+.maraton .header img{
+  width: 200px;
+  height: 200px;
+  float: left;
+  padding: 20px;
+}
+.maraton .header h1{
+  
+  color: red;
+  margin: 20px;
+  padding: 10px;
+}
+.maraton .header{
+  background-color: rgba(255, 255, 255, 0.677);
+  height: 250px ;
+  color: rgba(255, 0, 0, 0.685);
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+
+.maraton .background {
+  position: relative;
+  background-image: url(./Slike/pozadina.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.maraton .background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.742); /* Ova vrijednost može biti podešena po želji */
+  z-index: 1;
+}
+
+
+.maraton .content {
+  position: relative;
+  z-index: 2;
+  color: white;
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.maraton .stit {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ .maraton .stit img{
+  width: 400px;
+  height: 350px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.maraton .stit .tekst {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Vertikalno centriranje */
+  text-align: center; /* Horizontalno centriranje */
+  padding-right: 20px;
+}
+
+.maraton .stit .tekst p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.maraton .stit .tekst {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.maraton .stit .slika {
+  flex: 1;
+}
+
+
+.maraton .gledanost{
+  margin: 20px;
+  
+}
+.maraton .gledanost p{
+  padding: 10px;
+}
+.maraton .ruta{
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+.maraton .ruta {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center; /* Centriranje vertikalno */
+  margin-bottom: 20px;
+}
+
+.maraton .ruta .slika img {
+  max-width: 100%;
+  height: auto;
+}
+
+.maraton .ruta .tekst {
+  flex: 1;
+  text-align: center; /* Centriranje teksta horizontalno */
+  margin-left: 20px; /* Razmak između slike i teksta */
+}
+
+.maraton .lada {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+
+ .maraton .lada img{
+  width: 400px;
+  height: 350px;
+}
+.maraton .lada .tekst {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertikalno centriranje */
+  text-align: center; /* Horizontalno centriranje */
+  padding-right: 20px;
+}
+
+.maraton .lada .tekst p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.maraton .lada .tekst {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.maraton .lada .slika {
+  flex: 1;
+}
+
+
+
+.maraton .brzinske{
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px;
+  justify-content: space-between;
+  align-items: center; /* Centriranje vertikalno */
+}
+
+
+.maraton .brzinske .slika img {
+  width: 500px;
+  height: 250px;
+}
+
+.maraton .brzinske .tekst {
+  flex: 1;
+  text-align: center; /* Centriranje teksta horizontalno */
+  margin-left: 20px; /* Razmak između slike i teksta */
+}
+.maraton .zanimljivosti h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Razmak ispod naslova */
+}
+
+.maraton .zanimljivosti .sadrzaj {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 20px; /* Razmak između tekstualnog i slikovnog dijela */
+}
+
+.maraton .zanimljivosti .tekst, .zanimljivosti .slika {
+  flex: 1;
+  padding: 10px; /* Dodavanje malo unutarnjeg razmaka */
+}
+
+.maraton .zanimljivosti .tekst {
+  text-align: center; /* Centriranje teksta unutar tekstualnog dijela */
+}
+.maraton .tablica table {
+  width: 80%;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  margin: 20px auto;
+  border-radius: 10px; /* Zaobljeni rubovi tablice */
+  overflow: hidden; /* Osigurava da se zaobljeni rubovi primijene na cijelu tablicu */
+}
+
+.maraton .tablica th, .tablica td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.maraton .tablica th {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  text-align: center; /* Centriranje teksta u zaglavlju */
+  color: black; /* Crna boja teksta u zaglavlju */
+}
+
+/* Specifični stilovi za stupce */
+.maraton .tablica td:first-child {
+  color: black;
+}
+
+.maraton .tablica td:nth-child(2) {
+  color: red;
+}
+
+/*NORIN */
+.norin {
+  position: relative;
+  background-image: url(./Slike/pozadinaNorin.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  padding-top: 50px; /* Dodano */
+  padding-bottom: 50px; /* Dodano */
+  font-size: 18x;
+}
+
+.norin .divv {
+  background-color: rgba(255, 255, 255, 0.763);
+  width: 70%;
+  border-radius: 20px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px; /* Prilagođeno */
+  padding-bottom: 20px; /* Dodano */
+}
+
+
+.norin .trupa img{
+  width: 315px;
+  height: 223px;
+  padding: 5px;
+}
+.norin .slike{
+  margin: 20px;
+}
+
+.norin .opcenito p{
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.norin h1{
+  margin: 10px;
+}
+
+
+.norin .legenda {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+.norin .legenda img{
+  width: 400px;
+  height: 350px;
+}
+.norin .legenda .tekst {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertikalno centriranje */
+  text-align: center; /* Horizontalno centriranje */
+  padding-right: 20px;
+}
+
+.norin .legenda .tekst p {
+  margin: 0;
+  padding: 10px 0;
+  font-style: italic;
+  color: rgb(51, 50, 50);
+}
+
+.norin .legenda .tekst {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.norin .legenda .slika {
+  flex: 1;
+}
+.norin .kula a {
+  font-weight: bold; /* Postavljanje podebljanja za poveznicu */
+  text-decoration: none; /* Uklanjanje podvlake ispod poveznice */
+  color: black; /* Promjena boje poveznice */
+}
+
+.norin .kula a:hover {
+  color: blue;
+}
+.norin .narona .slika img{
+  width: 700px;
+  height: 400px;
+  transition: transform 0.3s; /* Dodavanje tranzicije za glatku promjenu veličine */
+  margin: 10px;
+}
+.norin .narona .tekst{
+  margin: 20px;
+}
+.norin .narona .slika img:hover{
+  transform: scale(1.1); /* Povećavanje slike na hover */
+}
+
+/*METKOVIĆ */
+.metkovic{
+  background-color: blue;
+  font-size: 18px;
+}
+.metkovic  h1{
+  color: white;
+  text-align: center;
+  padding:  20px;
+}
+.metkovic .grb {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  background-color: rgba(255, 255, 255, 0.77); /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+.metkovic .grb .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-right: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.metkovic .grb .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+}
+.metkovic .grb .slika img {
+  max-width: 150px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+}
+.metkovic .predolac {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  background-color: rgba(255, 255, 255, 0.77); /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+.metkovic .predolac .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-left: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.metkovic .predolac .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+  
+}
+.metkovic .predolac .slika img {
+  max-width: 500px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+.metkovic .delta {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  background-color: rgba(255, 255, 255, 0.77); /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+.metkovic .delta .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-right: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.metkovic .delta .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+}
+.metkovic .delta .slika img {
+  max-width: 700px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+.metkovic .narona {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  background-color: rgba(255, 255, 255, 0.77); /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+.metkovic .narona .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-left: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.metkovic .narona .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+  
+}
+.metkovic .narona .slika img {
+  max-width: 500px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+.metkovic .narona .tekst a{
+  font-style: none;
+  font-weight: bold;
+  text-decoration: none;
+}
+.metkovic .zbirka {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  background-color: rgba(255, 255, 255, 0.77); /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+
+.metkovic .maraton {
+  display: flex; /* Postavlja flex prikaz za unutarnje divove */
+  justify-content: space-around; /* Ravnomerno raspoređuje unutarnje divove sa jednakim razmakom oko njih */
+  align-items: center; /* Centralizuje unutarnje divove po vertikali */
+  margin: 20px; /* Dodaje margine oko maraton diva */
+  padding: 20px; /* Dodaje padding unutar maraton diva */
+  background-color: rgba(255, 255, 255, 0.77);; /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+.metkovic .maraton > div {
+  flex: 1; /* Svi unutarnji divovi će zauzimati jednaku širinu */
+  text-align: center; /* Centrira sadržaj unutar svakog unutarnjeg diva */
+}
+.metkovic .maraton .tekst{
+  flex: 2;
+  padding-right: 10px;
+}
+.metkovic .maraton .slika img {
+    max-width: 350px; /* Postavlja maksimalnu širinu slike */
+    height: auto; /* Zadržava proporcije slike */
+    display: block; /* Postavlja sliku da zauzima celi prostor unutar svog kontejnera */
+    margin: 0 auto; /* Centrira sliku horizontalno */
+    border-radius: 10px;
+}
+.metkovic .maraton .naslov{
+  border-left: solid 5px blue;
+  padding: 30px;
+  
+}
+
+.metkovic .sport {
+  display: flex; /* Postavlja flex prikaz za unutarnje divove */
+  justify-content: space-around; /* Ravnomerno raspoređuje unutarnje divove sa jednakim razmakom oko njih */
+  align-items: center; /* Centralizuje unutarnje divove po vertikali */
+  margin: 20px; /* Dodaje margine oko maraton diva */
+  padding: 20px; /* Dodaje padding unutar maraton diva */
+  background-color: rgba(255, 255, 255, 0.77);; /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+  
+}
+
+.metkovic .sport > div {
+  flex: 1; /* Svi unutarnji divovi će zauzimati jednaku širinu */
+  text-align: center; /* Centrira sadržaj unutar svakog unutarnjeg diva */
+}
+.metkovic .sport .tekst{
+  flex: 2;
+  padding-right: 10px;
+}
+.metkovic .sport .slika img {
+    max-width: 350px; /* Postavlja maksimalnu širinu slike */
+    height: auto; /* Zadržava proporcije slike */
+    display: block; /* Postavlja sliku da zauzima celi prostor unutar svog kontejnera */
+    margin: 0 auto; /* Centrira sliku horizontalno */
+    border-radius: 10px;
+}
+.metkovic .sport .naslov{
+  border-right: solid 5px blue;
+  padding: 30px;
+}
+  
+
+.metkovic .kultura {
+  display: flex; /* Postavlja flex prikaz za unutarnje divove */
+  justify-content: space-around; /* Ravnomerno raspoređuje unutarnje divove sa jednakim razmakom oko njih */
+  align-items: center; /* Centralizuje unutarnje divove po vertikali */
+  margin: 20px; /* Dodaje margine oko maraton diva */
+  padding: 20px; /* Dodaje padding unutar maraton diva */
+  background-color: rgba(255, 255, 255, 0.77);; /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+.metkovic .kultura > div {
+  flex: 1; /* Svi unutarnji divovi će zauzimati jednaku širinu */
+  text-align: center; /* Centrira sadržaj unutar svakog unutarnjeg diva */
+}
+.metkovic .kultura .tekst{
+  flex: 2;
+  padding-right: 10px;
+}
+
+.metkovic .kultura .naslov{
+  border-top: solid 5px blue;
+  padding: 30px;
+  
+}
+
+
+.metkovic .strijelci {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  background-color: rgba(255, 255, 255, 0.77); /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+.metkovic .strijelci .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-right: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.metkovic .strijelci .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+}
+.metkovic .strijelci .slika img {
+  max-width: 700px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+
+.metkovic .vid {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  background-color: rgba(255, 255, 255, 0.77); /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+.metkovic .vid .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-right: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.metkovic .vid .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+}
+.metkovic .vid .slika img {
+  max-width: 700px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+.metkovic .spomenici  .naslov{
+  border-bottom: solid 5px blue;
+  padding: 30px;
+  
+}
+.metkovic .prvo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  background-color: rgba(255, 255, 255, 0.77); /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+.metkovic .spomenici .prvo .tekst{
+  text-align: center;
+  margin: 15px;
+}
+
+
+.metkovic .kula {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  background-color: rgba(255, 255, 255, 0.77); /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+.metkovic .kula .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-left: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.metkovic .kula .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+  
+}
+.metkovic .kula .slika img {
+  max-width: 500px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+.metkovic .iframe-container {
+  text-align: center; /* Centriranje sadržaja */
+  margin-top: 50px; /* Margina od vrha */
+}
+
+
+.metkovic .misecina {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  background-color: rgba(255, 255, 255, 0.77); /* Postavlja bijelu pozadinu */
+  border-radius: 10px; /* Zaobljeni rubovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  color: blue;
+}
+
+.metkovic .misecina .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-left: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.metkovic .misecina .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+  
+}
+.metkovic .misecina .slika img {
+  max-width: 500px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+/* POČETNAA */
+
+.naslovna{
+  font-size: 18px;
+  height: 100%;
+  
+}
+
+
+
+.naslovna .background {
+  position: relative;
+  background-image: url(./Slike/pozadinaNeretva.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.naslovna .background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.527); /* Ova vrijednost može biti podešena po želji */
+  z-index: 1;
+}
+
+
+.naslovna .content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+.naslovna .ruta {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+}
+
+.naslovna .ruta .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-left: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.naslovna .ruta .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+  
+}
+.naslovna .ruta .slika img {
+  max-width: 500px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+.naslovna .neretva{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+}
+
+
+
+.naslovna .mtk {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+}
+  
+
+.naslovna .mtk .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-right: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.naslovna .mtk .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+}
+.naslovna .mtk .slika img {
+  max-width: 700px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+.naslovna .deltaNeretve {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+}
+
+.naslovna .deltaNeretve .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-left: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.naslovna .deltaNeretve .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+  
+}
+.naslovna .deltaNeretve .slika img {
+  max-width: 500px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+.naslovna .vid{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+}
+
+
+.naslovna .zivotinje {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+}
+  
+
+.naslovna .zivotinje .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-right: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.naslovna .zivotinje .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+}
+.naslovna .zivotinje .slika img {
+  max-width: 700px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+
+.naslovna .prud {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+}
+
+.naslovna .prud .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-left: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.naslovna .prud .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+  
+}
+.naslovna .prud .slika img {
+  max-width: 500px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+.naslovna .mara {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+}
+  
+
+.naslovna .mara .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-right: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.naslovna .mara .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+}
+.naslovna .mara .slika img {
+  max-width: 700px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+
+.naslovna .opuzen {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+}
+
+.naslovna .opuzen .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-left: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.naslovna .opuzen .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+  
+}
+.naslovna .opuzen .slika img {
+  max-width: 500px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+
+
+.naslovna .navodnjavanje{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+}
+
+.naslovna .ptice{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+}
+
+.naslovna .iframe-container {
+  text-align: center; /* Centriranje sadržaja */
+  margin-top: 50px; /* Margina od vrha */
+}
+
+
+.naslovna .parila {
+  display: flex;
+  align-items: center; /* Vertikalno centriranje elemenata, opcionalno */
+  margin: 20px; /* Dodaje margine oko grb diva */
+  padding: 20px; /* Dodaje padding unutar grb diva */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodaje blagu sjenu */
+}
+  
+
+.naslovna .parila .tekst {
+  flex: 1; /* Ovo omogućava da tekst div zauzme preostali prostor */
+  padding-right: 10px; /* Dodaje malo razmaka između teksta i slike */
+}
+
+.naslovna .parila .slika {
+  flex: 0 0 auto; /* Drži veličinu slike prema njenoj prirodnoj veličini */
+}
+.naslovna .parila .slika img {
+  max-width: 700px; /* Postavlja maksimalnu širinu slike */
+  height: auto; /* Zadržava proporcije slike */
+  border-radius: 10px; /* Zaobljeni rubovi */
+}
+
+a{
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+}
+
+.naslovna a{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.metkovic a{
+  color: blue;
+}
+.maraton a{
+  color: red;
+}
+.norin a{
+  color: black;
+}
+a:visited{
+  color: red;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+button {
+  background-color: red; /* Boja pozadine */
+  color: white; /* Boja teksta */
+  border: none; /* Uklonite okvir */
+  padding: 10px 20px; /* Unutrašnji razmak */
+  text-align: center; /* Centriranje teksta */
+  text-decoration: none; /* Uklanjanje podvlačenja */
+  display: inline-block; /* Inline-block prikaz */
+  font-size: 16px; /* Veličina fonta */
+  margin: 4px 2px; /* Margine */
+  cursor: pointer; /* Promena kursora na pokazivač */
+  border-radius: 12px; /* Zaobljenje uglova */
+  transition: background-color 0.3s; /* Animacija za promenu boje */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: darkred; /* Tamnija crvena na hover */
+}
+.prijava{
+  margin: 0 auto;
+ width: 60%;
+ background-color: white;
+ color: red;
+ border-radius: 10px;
+}
+.botun{
+  text-align: center;
+}
+form{
+ margin: 0 auto;
+  width: 50%;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px; /* Povećano sa 10px 20px */
+  background-color: rgba(230, 208, 208, 0.538); /* Dodana prozirnost */
+  height: 80px; /* Povećana visina */
+}
+
+.ime {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333333c8;
+}
+
+.tema {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333333c8;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px; /* Povećano sa 10px 20px */
+  background-color: rgba(230, 208, 208, 0.538); /* Dodana prozirnost */
+  height: 80px; /* Povećana visina */
+  color: #333333c8;
+}
+
+.footer p {
+  margin: 0;
+  text-align: center; /* Osigurava centriranje teksta unutar svakog <p> elementa */
+  flex: 1; /* Ovaj dodatak može pomoći u boljem rasporedu prostora */
 }
